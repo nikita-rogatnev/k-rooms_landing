@@ -45,15 +45,60 @@
 	line-height: 1.5;
 }
 
-.main__container a {
-	display: inline-block;
+.main__form {
+	width: 50%;
+	margin: 0 auto;
 
-	margin-bottom: 30px;
+	font-size: 0;
+}
+
+.main__form input {
+	display: block;
+
+	width: 100%;
+	margin: 10px auto;
+	padding: 15px;
+
+	border: 1px solid;
+	border-radius: 3px;
+}
+
+.main__form input:focus {
+	outline: none;
+}
+
+.main__form button {
+	display: block;
+
+	width: 100%;
+	margin: 0 auto;
 	padding: 15px 60px;
 
 	text-decoration: none;
+	text-transform: uppercase;
 
+	opacity: 0.9;
 	color: @color__white;
+	border: 0;
 	border-radius: 3px;
-	background: #e91e63;
+	background: @color__pink;
+
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.main__form button:hover {
+	opacity: 1;
+}
+
+@media all and (max-width: 600px) {
+	.main {
+		padding: 60px 20px;
+	}
+	.main__container {
+		padding: 40px 30px;
+	}
+	.main__form {
+		width: 100%;
+	}
 }

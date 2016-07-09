@@ -12,10 +12,12 @@ html {
   background-color: #efefef;
 }
 body {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   height: 100%;
-  font: 400 15px/1.4 'Open Sans', sans-serif;
+  font: 400 15px/1.4 "Open Sans", sans-serif;
 }
 /* ------------------------------------------ */
 /* HEADER BLOCK
@@ -25,7 +27,8 @@ body {
   padding: 20px 40px;
   background-color: #27313c;
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
 }
 .header__cantainer {
   max-width: 880px;
@@ -52,7 +55,7 @@ body {
   opacity: 0.9;
   color: #ffffff;
   border-radius: 3px;
-  background-color: #d6336a;
+  background-color: #e91e63;
   font-size: 14px;
   font-weight: bold;
 }
@@ -80,7 +83,8 @@ body {
 .main {
   padding: 60px 50px;
   color: #525252;
-  flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
 }
 .main__container {
   max-width: 880px;
@@ -107,14 +111,50 @@ body {
   text-align: left;
   line-height: 1.5;
 }
-.main__container a {
-  display: inline-block;
-  margin-bottom: 30px;
+.main__form {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 0;
+}
+.main__form input {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 3px;
+}
+.main__form input:focus {
+  outline: none;
+}
+.main__form button {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
   padding: 15px 60px;
   text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.9;
   color: #ffffff;
+  border: 0;
   border-radius: 3px;
   background: #e91e63;
+  font-size: 14px;
+  font-weight: bold;
+}
+.main__form button:hover {
+  opacity: 1;
+}
+@media all and (max-width: 600px) {
+  .main {
+    padding: 60px 20px;
+  }
+  .main__container {
+    padding: 40px 30px;
+  }
+  .main__form {
+    width: 100%;
+  }
 }
 /* ------------------------------------------ */
 /* FOOTER BLOCK
@@ -126,7 +166,8 @@ body {
   background-color: #292c2f;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   font: normal 16px sans-serif;
-  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
 }
 .footer__cantainer {
   max-width: 880px;
@@ -160,6 +201,10 @@ body {
   background-color: #33383b;
   font-size: 20px;
   line-height: 35px;
+}
+.footer__social a:hover {
+  color: #33383b;
+  background-color: #ffffff;
 }
 @media (max-width: 600px) {
   .footer__copyright,

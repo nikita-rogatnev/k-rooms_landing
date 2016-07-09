@@ -1,9 +1,10 @@
 "use strict";
 
 module.exports = function (grunt) {
+
 	grunt.loadNpmTasks("grunt-contrib-less");
 	grunt.loadNpmTasks("grunt-postcss");
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks("grunt-cssnano");
 
 	grunt.initConfig({
 
@@ -16,25 +17,24 @@ module.exports = function (grunt) {
 		},
 
 		postcss: {
-			style: {
+			prefix: {
 				options: {
-					processors: [require("autoprefixer")({
-							browsers: ["last 1 version", "last 2 Chrome versions", "last 2 Firefox versions", "last 2 Opera versions", "last 2 Edge versions"]
-						})]
+					processors: [require("autoprefixer")({browsers: "last 2 versions"})]
 				},
-				src: "./css/*.css"
-			}
-		},
-
-		cssmin: {
-			style: {
-				src: "./css/style.css",
-				dest: "./css/style.min.css"
+				src: "css/style.css",
+				dest: "css/style.css"
+			},
+			minify: {
+				options: {
+					processors: [require("cssnano")()]
+				},
+				src: "css/style.css",
+				dest: "css/style.min.css"
 			}
 		}
 
 	});
 
-	grunt.registerTask("default", ["less", "postcss", "cssmin"]);
+	grunt.registerTask("default", ["less", "postcss"]);
 
 };
