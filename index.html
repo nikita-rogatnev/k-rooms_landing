@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>K-rooms</title>
+    <title>K-rooms | Party Went Wrong</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Creepster">
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
@@ -21,11 +21,14 @@
             <!-- <img src="./img/main/main__logo.png" width="260" height="68" alt="k-games logo" class="main__logo"> -->
             <h1>“Party Went Wrong”</h1>
             <h2>The new escape room experience launching soon in Tallin. After the party something went wrong, time to get out, can manage? It is not as easy as you thing…</h2>
-            <form action="#" class="main__form">
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="text" name="email" id="email" placeholder="Email">
+            <form method="post" class="main__form">
+                <input type="text" name="name" id="name" placeholder="Name" required="required">
+                <input type="text" name="email" id="email" placeholder="Email" required="required">
                 <button>Get discount</button>
             </form>
+            <div class="main__success hidden">
+                <h3>Success! Check your email for “Party Went Wrong” discount.</h3>
+            </div>
         </div>
     </main>
     <!-- MAIN END -->
@@ -49,6 +52,21 @@
 
     <!-- SCRIPTS -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(".main__form").submit(function(e) {
+            e.preventDefault();
+            var form_data = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: "php/script.php",
+                data: form_data,
+                success: function(msg) {
+                    $(".main__form").addClass("hidden");
+                    $(".main__success").removeClass("hidden");
+                }
+            });
+        });
+    </script>
     <!-- SCRIPTS END -->
 
 </body>

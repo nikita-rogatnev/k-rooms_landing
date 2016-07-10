@@ -19,6 +19,12 @@ body {
   height: 100%;
   font: 400 15px/1.4 "Open Sans", sans-serif;
 }
+.visible {
+  display: block;
+}
+.hidden {
+  display: none;
+}
 /* ------------------------------------------ */
 /* MAIN BLOCK
 /* ------------------------------------------ */
@@ -100,12 +106,19 @@ body {
 .main__form button:hover {
   opacity: 1;
 }
+.main__success h3 {
+  color: #90ee90;
+  font-size: 24px;
+}
 @media all and (max-width: 600px) {
   .main__form {
     width: 100%;
   }
   .main__container h1 {
     font-size: 40px;
+  }
+  .main__success h3 {
+    font-size: 18px;
   }
 }
 /* ------------------------------------------ */
