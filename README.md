@@ -2,8 +2,6 @@
 
 https://rogatnev-nikita.github.io/k-rooms_landing/
 
-
-
 [travis-image]: https://travis-ci.org/rogatnev-nikita/k-rooms_landing.svg?branch=master
 [travis-url]: https://travis-ci.org/rogatnev-nikita/k-rooms_landing
 
