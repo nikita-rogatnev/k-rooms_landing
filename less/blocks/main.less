@@ -2,35 +2,50 @@
 /* MAIN BLOCK
 /* ------------------------------------------ */
 .main {
-	padding: 60px 50px;
+	display: flex;
+
+	padding: 40px 15px;
 
 	color: #525252;
+	background: url(../img/main/main__bg.jpg) no-repeat center center;
+	background-size: cover;
 
 	flex: 1 0 auto;
+	align-items: center;
 }
 
 .main__container {
-	max-width: 880px;
+	max-width: 1200px;
 	height: 100%;
 	margin: 0 auto;
-	padding: 60px 90px;
 
 	text-align: center;
+}
 
-	background-color: @color__white;
+.main__logo {
+	display: block;
+
+	margin: 0 auto 20px;
 }
 
 .main__container h1 {
+	display: block;
+
 	margin-bottom: 25px;
 
-	font-size: 28px;
+	letter-spacing: 6px;
+
+	color: @color__white;
+
+	font-family: "Creepster", "Open Sans", sans-serif;
+	font-size: 110px;
 }
 
-.main__container h3 {
+.main__container h2 {
 	max-width: 600px;
 	margin: 0 auto 35px;
 
-	color: #999999;
+	color: @color__white;
 
 	font-size: 16px;
 	font-weight: normal;
@@ -61,6 +76,8 @@
 
 	border: 1px solid;
 	border-radius: 3px;
+
+	font-size: 14px;
 }
 
 .main__form input:focus {
@@ -92,13 +109,10 @@
 }
 
 @media all and (max-width: 600px) {
-	.main {
-		padding: 60px 20px;
-	}
-	.main__container {
-		padding: 40px 30px;
-	}
 	.main__form {
 		width: 100%;
+	}
+	.main__container h1 {
+		font-size: 40px;
 	}
 }
