@@ -46,17 +46,12 @@ body {
   margin: 0 auto;
   text-align: center;
 }
-.main__logo {
-  display: block;
-  margin: 0 auto 20px;
-}
 .main__container h1 {
   display: block;
   margin-bottom: 25px;
-  letter-spacing: 6px;
   color: #ffffff;
-  font-family: "Creepster", "Open Sans", sans-serif;
-  font-size: 110px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 70px;
 }
 .main__container h2 {
   max-width: 600px;
@@ -128,15 +123,25 @@ body {
   width: 100%;
   padding: 45px 50px;
   text-align: left;
-  background-color: #292c2f;
+  background-color: #000000;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   font: normal 16px sans-serif;
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
 }
 .footer__cantainer {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   max-width: 880px;
   margin: 0 auto;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.footer__copyright,
+.footer__logo,
+.footer__social {
+  width: 33.33%;
 }
 .footer__copyright p {
   margin: 0;
@@ -150,10 +155,14 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
+.footer__logo img {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+}
 .footer__social {
-  float: right;
-  max-width: 180px;
   margin-top: 6px;
+  text-align: right;
 }
 .footer__social a {
   display: inline-block;
@@ -172,13 +181,18 @@ body {
   background-color: #ffffff;
 }
 @media (max-width: 600px) {
+  .footer__cantainer {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
   .footer__copyright,
+  .footer__logo,
   .footer__social {
+    width: 100%;
     text-align: center;
   }
-  .footer__social {
-    float: none;
-    margin: 0 auto 20px;
+  .footer__logo {
+    margin: 50px auto;
   }
   .footer__copyright h3 {
     line-height: 1.8;
