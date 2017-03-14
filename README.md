@@ -1,4 +1,5 @@
-# K-rooms landing page [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url] [![devDependency status][dev-dependency-image]][dev-dependency-url]
+# K-rooms landing page
+[![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url] [![devDependency status][dev-dependency-image]][dev-dependency-url]
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/rogatnev-nikita/k-rooms_landing.svg)](https://greenkeeper.io/)
 
